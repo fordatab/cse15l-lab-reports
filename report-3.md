@@ -1,13 +1,15 @@
 grep
 ======
 -c :
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP/Abernathy
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP/Abernathy
 $ grep -c "bot" ch1.txt
 6
 ```
 Counts the number of lines that contains the string "bot" and it is useful 
 for counting substrings.
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP
 $ grep -c "ratio" Abernathy/*
 Abernathy/ch1.txt:20
 Abernathy/ch14.txt:18
@@ -25,7 +27,8 @@ name. It is useful because all the information in the directory can be
 seen from one command.
 
 -l :
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/travel_guides
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/travel_guides
 $ grep -l "History" berlitz2/*
 berlitz2/Algarve-History.txt
 berlitz2/Amsterdam-History.txt
@@ -67,7 +70,8 @@ Prints all the files that contains the word "History". It is useful because
 it suppresses all the lines that contains the word "History" and shows the 
 files which is less clutter.
 
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2
 $ grep -l "fun" travel_guides/*/* | wc -l
 109
 ```
@@ -76,7 +80,8 @@ using a pipe to do ```wc```. This is useful for counting files concisely
 without output spam.
 
 -i :
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP/Berk
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP/Berk
 $ grep -o -i "Dog"  CH4.txt
 dog
 dog
@@ -87,7 +92,8 @@ Prints all occurrences of the string "Dog" but without case distinction and
 -o shows that "dog" is matched using -i. It is useful because words at the 
 beginning of a sentence are capitalized and can therefore be counted too easily.
 
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP
 $ find Kauffman/* | grep -i -c "ch"
 9
 ```
@@ -95,7 +101,8 @@ Counts the number of files that are chapters using ```find``` and -i because
 some are named "CH" and -i allows to search for all cases of "ch". 
 
 -w
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP/Rybczynski
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main/written_2/non-fiction/OUP/Rybczynski
 $ grep -w -c "at" *
 ch1.txt:16
 ch2.txt:15
@@ -105,7 +112,8 @@ Counts the number of lines with that contains the word "at", not including
 substrings. This is useful because the other options may match a word which 
 is a substring of another one and -w prevents that.
 
-```ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main
+```
+ugcir@LAPTOP-I6PBA9AM MINGW64 ~/Downloads/docsearch-main/docsearch-main
 $ grep -w -r -l -i "lucayans" written_2/
 written_2/travel_guides/berlitz2/Bahamas-History.txt
 ```
